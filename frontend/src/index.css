@@ -1,0 +1,207 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: darkslateblue;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 90vw;
+  max-width: 800px;
+  height: 80vh;
+  margin: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headingText {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.button {
+  background-color: #61dafb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #47a3f3;
+}
+
+.input-container {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: #ff4646;
+  margin-top: 10px;
+}
+
+.search-results {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.answer {
+  background-color: #fff;
+  color: #333;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* speech reco css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.mircophone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+}
+
+.microphone-icon-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: linear-gradient(128deg, #ffffff, #647c88);
+  padding: 20px;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.microphone-icon-container.listening::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff81;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.4);
+  border-radius: 50%;
+  animation: listening infinite 1.5s;
+}
+
+@keyframes listening {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+}
+
+.microphone-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.microphone-status {
+  font-size: 22px;
+  margin-right: 20px;
+  min-width: 215px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 30px;
+  margin-right: 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 5px #ffffff1a;
+}
+
+.microphone-result-container {
+  text-align: center;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+
+}
+
+.microphone-result-text {
+  margin-bottom: 30px;
+  width: 70vw;
+  overflow-y: auto;
+}
+
+.microphone-reset {
+  border: 1px solid #fff;
+  background: none;
+  color: white;
+  width: fit-content;
+}
